@@ -42,8 +42,7 @@
 (if window-system
     (progn (menu-bar-mode t)
 	   (scroll-bar-mode t))
-  (progn (menu-bar-mode -1)
-	 (scroll-bar-mode -1)))
+  (menu-bar-mode -1))
 
 ;; disable blink cursor
 (blink-cursor-mode -1)
