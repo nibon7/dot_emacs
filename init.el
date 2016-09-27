@@ -36,6 +36,9 @@
 
 (add-to-list 'load-path  (expand-file-name "lisp" root-directory))
 
+(when (version< emacs-version "24.4")
+  (error "GNU Emacs 24.4 or later required, but you're running %s" emacs-version))
+
 (require 'init-package)
 (require 'init-common)
 (require 'init-company)
