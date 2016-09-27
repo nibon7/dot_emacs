@@ -63,6 +63,9 @@
 ;; show column number
 (column-number-mode t)
 
+;; show buffer size
+(size-indication-mode t)
+
 ;; show matching parens
 (show-paren-mode t)
 
