@@ -51,6 +51,7 @@
     flycheck-ycmd
     clang-format
     magit
+    markdown-mode
     cmake-mode
     graphviz-dot-mode
     zenburn-theme
