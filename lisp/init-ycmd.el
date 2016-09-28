@@ -41,8 +41,9 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (flycheck-ycmd-setup)
 
-(set-variable 'ycmd-global-config (expand-file-name ".ycm_extra_conf.py" (getenv "HOME")))
-(set-variable 'ycmd-server-command '("python2.7" "/home/nibon7/.vim/bundle/YouCompleteMe/third_party/ycmd/ycmd"))
+(set-variable 'ycmd-global-config (expand-file-name ".ycm_extra_conf.py" home-directory))
+(set-variable 'ycmd-server-command '("python2.7"))
+(add-to-list 'ycmd-server-command (expand-file-name ".vim/bundle/YouCompleteMe/third_party/ycmd/ycmd" home-directory) t)
 
 (provide 'init-ycmd)
 ;;; init-ycmd.el ends here

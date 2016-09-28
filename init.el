@@ -34,6 +34,9 @@
 (defvar root-directory (file-name-directory load-file-name)
   "The root directory of the configuration.")
 
+(defvar home-directory (getenv "HOME")
+  "Home directory")
+
 (add-to-list 'load-path  (expand-file-name "lisp" root-directory))
 
 (when (version< emacs-version "24.4")
