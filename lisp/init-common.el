@@ -89,6 +89,10 @@
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 
+;; smex
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+
 ;; color theme
 (load-theme 'zenburn t)
 

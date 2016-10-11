@@ -1,4 +1,5 @@
-;;; init-package.el --- package configuration
+
+;;; init-git.el --- magit configuration
 ;;
 ;; Copyright (C) 2015-2016 nibon7
 ;;
@@ -27,41 +28,13 @@
 
 ;;; Commentary:
 
-;; package configuration
+;; magit configuration
 
 ;;; Code:
-(require 'package)
+;; disable builtin VC package
+(setq vc-handled-backends nil)
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(global-set-key (kbd "C-x g") 'magit-status)
 
-(package-initialize)
-
-(unless package-archive-contents
-  (package-refresh-contents))
-
-(defvar packages
-  '(smartparens
-    beacon
-    smex
-    company
-    auctex
-    ycmd
-    flycheck
-    company-auctex
-    company-ycmd
-    flycheck-ycmd
-    clang-format
-    magit
-    markdown-mode
-    cmake-mode
-    graphviz-dot-mode
-    zenburn-theme
-    ))
-
-(mapc #'(lambda (pkg)
-	  (unless (package-installed-p pkg)
-	    (package-install pkg)))
-      packages)
-
-(provide 'init-package)
-;;; init-package.el ends here
+(provide 'init-git)
+;;; init-git.el ends here

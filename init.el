@@ -48,4 +48,5 @@
 (require 'init-ycmd)
 (require 'init-c)
 (require 'init-org)
+(require 'init-git)
 ;;; init.el ends here
